@@ -1,0 +1,1 @@
+{"uuid":"469afae9-0830-4dea-9a3f-9816f3e9116f","name":"Automation","children":["05a2f28f-63b9-45da-b700-01c0aab0a373"],"befores":[],"afters":[{"name":"teardown","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1675405053832,"stop":1675405054032}],"start":1675404994018,"stop":1675405054034}
