@@ -4,18 +4,19 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 import config.configProperties;
-import utils.reusebleFunctions;
+import general.mainCall;
+import general.reusebleFunctions;
 
 public class eDocAutomation {
-    public static WebDriver driver=config.driverManager.Driver();
+    public static WebDriver driver=mainCall.driverStart();
     @Test
     public static void Login(){
 
-        driver.get(configProperties.URL);
-        reusebleFunctions.enterTextInInputField("email","User01");
-        driver.findElement(By.name("password")).sendKeys(configProperties.pass);
-        driver.findElement(By.xpath("//button[@type='submit']")).click();
-        driver.findElement(By.xpath("//a[@href='https://staging.ewaiverpro.app/edoc-admin']")).click();
+        reusebleFunctions.navigateURL(configProperties.URL);
+        reusebleFunctions.inputTextByElementName("email",configProperties.userName);
+        reusebleFunctions.inputTextByElementName("password",configProperties.pass);
+        reusebleFunctions.clickElementByxpath("//button[@type='submit']");
+        reusebleFunctions.clickElementByxpath("//a[@href='https://staging.ewaiverpro.app/edoc-admin']");
         driver.quit();
     }
 }
