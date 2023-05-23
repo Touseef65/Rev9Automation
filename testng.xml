@@ -5,8 +5,8 @@
         <classes>
             <class name="testcases.eDocAutomation">
                 <methods>
-                    <include name="test01"/>
-                    <include name="test02"/>
+                    <include name="Login"/>
+
                 </methods>
             </class>
 
