@@ -7,8 +7,7 @@ import config.configProperties;
 import general.mainCall;
 import general.reusebleFunctions;
 
-public class eDocAutomation {
-    public static WebDriver driver=mainCall.driverStart();
+public class eDocAutomation extends mainCall{
     @Test
     public static void Login(){
 
@@ -17,6 +16,5 @@ public class eDocAutomation {
         reusebleFunctions.inputTextByElementName("password",configProperties.pass);
         reusebleFunctions.clickElementByxpath("//button[@type='submit']");
         reusebleFunctions.clickElementByxpath("//a[@href='https://staging.ewaiverpro.app/edoc-admin']");
-        driver.quit();
     }
 }
