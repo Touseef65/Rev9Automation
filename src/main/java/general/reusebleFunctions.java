@@ -1,9 +1,14 @@
 package general;
 
-import config.configProperties;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Wait;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+
+import java.util.concurrent.TimeUnit;
 
 public class reusebleFunctions {
     public static WebDriver driver=mainCall.driver;
@@ -18,6 +23,12 @@ public class reusebleFunctions {
 
     public static  void inputTextByElementName(String element,String text) {
         driver.findElement(By.name(element)).sendKeys(text);
+    }
+
+    public static void modalContainerAction(String element,String value,String Ok_button){
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        driver.findElement(By.xpath(element)).sendKeys(value);
+        driver.findElement(By.xpath(Ok_button)).click();
     }
 
     public static  void clickElementByxpath(String xpath) {

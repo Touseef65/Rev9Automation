@@ -8,8 +8,6 @@ import org.testng.annotations.Test;
 import pageObjects.automobillia_PO;
 
 public class Automobilliard {
-
-    public static WebDriver driver= driverManager.Driver();
     @Test
     public static void HybridCars()
     {
@@ -30,8 +28,4 @@ public class Automobilliard {
         Assert.assertEquals(Loginalert,"You have signed-in :)");
     }
 
-    @AfterTest
-    public void tearDown(){
-        driver.quit();
-    }
 }
