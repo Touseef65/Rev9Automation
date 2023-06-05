@@ -1,0 +1,1 @@
+{"uuid":"00d001cc-172a-4515-a6b5-a479d6d59cb1","name":"Automation","children":["28d00b5b-867a-436e-87a8-b5639dc55101"],"befores":[{"name":"driverStart","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1685440918564,"stop":1685440921325}],"afters":[],"start":1685440918497,"stop":1685440932638}
